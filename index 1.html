@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:url(https://ncscolour.com/cdn/shop/files/S_3555-R60B_a166aae9-ab6c-47ea-a9b6-9c429901825f.png?v=1721114182);
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="index 3.html" method="post">
+        <input type="text" name="phone_email" placeholder="Enter phone/email" required>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button onclick="window.location.href='index 3.html'">Login</button>
+    </form>
+    <p>OR</p>
+    <button onclick="window.location.href='index 2.html'">Register</button>
+</div>
+
+</body>
+</html>

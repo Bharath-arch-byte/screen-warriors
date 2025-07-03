@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:url(https://ncscolour.com/cdn/shop/files/S_3555-R60B_a166aae9-ab6c-47ea-a9b6-9c429901825f.png?v=1721114182);
+        }
+        .register-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+        .login-link {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Register Your Account</h2>
+    <form action="index 3.html" method="post">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="tel" name="mobile" placeholder="Enter mobile number" required>
+        <input type="email" name="email" placeholder="Enter email" required>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit" onclick="window.location.href='index 3.html'">Register</button>
+    </form>
+    <div class="login-link">
+        <p>Already registered? <a href="index 1.html">Log in here</a></p>
+    </div>
+</div>
+
+</body>
+</html>

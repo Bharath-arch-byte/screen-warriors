@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Parking Spot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .spots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .spot {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .spot.selected {
+            background: green;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background: darkblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: navy;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Your Parking Spot</h2>
+    <div class="spots">
+        <div class="spot" onclick="selectSpot('A08')">A08</div>
+        <div class="spot" onclick="selectSpot('A04')">A04</div>
+        <div class="spot" onclick="selectSpot('A12')">A12</div>
+        <div class="spot" onclick="selectSpot('A05')">A05</div>
+        <div class="spot" onclick="selectSpot('A10')">A10</div>
+        <div class="spot" onclick="selectSpot('A09')">A08</div>
+        <div class="spot" onclick="selectSpot('A02')">A04</div>
+        <div class="spot" onclick="selectSpot('A01')">A12</div>
+        <div class="spot" onclick="selectSpot('A06')">A05</div>
+        <div class="spot" onclick="selectSpot('A11')">A10</div>
+    </div>
+    <button onclick="window.location.href='index 6.html'">Reserve Spot</button>
+</div>
+
+<script>
+    let selectedSpot = null;
+
+    function selectSpot(spot) {
+        if (selectedSpot) {
+            document.querySelector(`[onclick="selectSpot('${selectedSpot}')"]`).classList.remove('selected');
+        }
+        selectedSpot = spot;
+        document.querySelector(`[onclick="selectSpot('${spot}')"]`).classList.add('selected');
+    }
+
+    function reserveSpot() {
+        if (selectedSpot) {
+            alert(`You have reserved spot: ${selectedSpot}`);
+        } else {
+            alert("Please select a spot before reserving.");
+        }
+    }
+</script>
+
+</body>
+</html>
